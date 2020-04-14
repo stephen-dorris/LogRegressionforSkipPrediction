@@ -2,7 +2,6 @@
 April Gustafson and Stephen Dorris
 CS 5100
 Utils.py
-
 This file has some utility classes/methods for our project.
 '''
 
@@ -14,20 +13,18 @@ from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 import numpy as np
 
 '''
-Class DataFrameCleaner 
+Class DataFrameCleaner
+Purpose:
 
-Purpose: 
-    
     Modularize dataset cleansing and manipulation done during each of our Logistic Regression trials
     to eliminate Code Reuse. Has ability to output Splitted Training and Testing Subsets.
-    
+
 Does:
-    
+
     - Loads Data from Spotify DataSets
     - Ability to rename and normalize given features
-    - Ability to one-hot-encode non numerical features and makes feature names readable for that. 
-    - Shuffles, Splits and returns proper training and testing data. 
-
+    - Ability to one-hot-encode non numerical features and makes feature names readable for that.
+    - Shuffles, Splits and returns proper training and testing data.
 '''
 
 
@@ -48,13 +45,11 @@ class DataFrameCleaner:
     def joinDFs(self, songs, sessions):
         '''
          internal method joinDFs
-
         :does - joins sessions and songs dfs on track id key to create full dataset
               - shuffles df so training and testing have random distribution of songs.
         :param sessions: sessions dataset filepath
         :param songs: songs dataset filepath
         :return : joined df
-
         '''
 
         # clean sessions track id key, change y label to 'skipped' for readability
@@ -127,8 +122,8 @@ class DataFrameCleaner:
 
 
 '''
-Utility Class to generate list of all subsets for given input list. Used as subroutine 
-throughout our project as brute force approach. 
+Utility Class to generate list of all subsets for given input list. Used as subroutine
+throughout our project as brute force approach.
 '''
 
 
@@ -155,7 +150,6 @@ class Subsets:
 def writeResults(fp, resultsDict, sort = True):
     '''
     Writes Results in form of "Feature(s).... Score", most often in  descending sorted order
-
     :param resultsDict k = feature(s) as tuple, v = score as float
     '''
 
