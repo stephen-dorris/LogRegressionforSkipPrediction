@@ -15,5 +15,3 @@
 - sfml: Currently Has skeleton version Minipaint, will have full application in a few weeks, which has a GUI, client/server networking for private IP address connection, and messaging feature. 
 
 -  Heirarchical Clustering Project
-    
-
